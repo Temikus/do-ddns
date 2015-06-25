@@ -1,2 +1,29 @@
 # do-ddns
-Openwrt DDNS script using Digital Ocean domains API
+
+Custom script for OpenWRT DDNS using Digital Ocean domains API
+Script for sending user defined u
+
+## Installation
+
+- Copy script to /usr/lib/ddns/
+- Make it executable:  
+  `# chmod +x /usr/lib/ddns/update_do.sh`
+- Specify the following parameters in the config:
+
+  `Username` - the record id in the DO API structure.
+  I.e. `3352896` if your endpoint is:
+  `https://api.digitalocean.com/v2/domains/digitaloceanisthebombdiggity.com/records/3352896`
+  `Password` - API Token
+  `Domain` - the domain managed by DO
+
+- Set a custom script option in /etc/config/ddns:
+  `option update_script '/usr/lib/ddns/update_do.sh'`
+- ???
+- PROFIT
+
+NOTE: the script is parsed (not executed) inside send_update() function
+of /usr/lib/ddns/dynamic_dns_functions.sh so you can use all available 
+functions and global variables inside this script that were already defined
+in dynamic_dns_updater.sh and dynamic_dns_functions.sh
+
+See [DO API guide](https://developers.digitalocean.com/documentation/v2/#domains) for more info.

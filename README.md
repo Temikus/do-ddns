@@ -7,12 +7,10 @@ Custom script for OpenWRT DDNS updates using Digital Ocean domains API
 - Copy script to /usr/lib/ddns/
 - Make it executable:  
   `# chmod +x /usr/lib/ddns/update_do.sh`
-- Specify the following parameters in the config:
+- Specify the following parameters in the /etc/config/ddns:
 
-  `Username` - the record id in the DO API structure.
-  I.e. `3352896` if your endpoint is:
-  `https://api.digitalocean.com/v2/domains/digitaloceanisthebombdiggity.com/records/3352896`
-  `Password` - API Token
+  `Username` - the record id in the DO API structure.  
+  `Password` - API Token  
   `Domain` - the domain managed by DO
 
 - Set a custom script option in /etc/config/ddns:

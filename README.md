@@ -1,7 +1,6 @@
 # do-ddns
 
-Custom script for OpenWRT DDNS using Digital Ocean domains API
-Script for sending user defined u
+Custom script for OpenWRT DDNS updates using Digital Ocean domains API
 
 ## Installation
 

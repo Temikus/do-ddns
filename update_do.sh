@@ -35,7 +35,7 @@ __HEADER_CONTENT=$(echo $__HEADER_CONTENT)
 __BODY=$(echo $__BODY | sed -e "s#\[IP\]#$__IP#g")
 
 #Send PUT request
-curl -X PUT -H "$__HEADER_CONTENT" -H "$__HEADER" -d "$__BODY" "$__URL" > $DATFILE
+curl -X PUT -H "$__HEADER_CONTENT" -H "$__HEADER" -d "$__BODY" "$__URL" > $DATFILE 2>&1
 
 write_log 7 "DDNS Provider answered:\n$(cat $DATFILE)"
 

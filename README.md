@@ -4,6 +4,7 @@ Custom script for OpenWRT DDNS updates using Digital Ocean domains API
 
 ## Installation
 
+- Make sure you have the curl package installed
 - Copy script to /usr/lib/ddns/
 - Make it executable:  
   `# chmod +x /usr/lib/ddns/update_do.sh`

@@ -20,7 +20,7 @@ local record_id=$URL_USER
 local __URL="https://api.digitalocean.com/v2/domains/[DOMAIN]/records/[RECORD_ID]"
 local __HEADER="Authorization: Bearer [PASSWORD]"
 local __HEADER_CONTENT="Content-Type: application/json"
-local __BODY='{"name":"@","data": "[IP]" }'
+local __BODY='{ "data": "[IP]" }'
 # inside url we need username and password
 
 [ -z "$password" ] && write_log 14 "Service section not configured correctly! Missing 'password'"
